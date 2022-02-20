@@ -194,11 +194,36 @@ dinners = OrderedDict({
     '2021-12-07': 'roast chicken',
     '2021-12-08': 'fried chicken',
     '2021-12-08b': 'potato salad',
+    '2022-01-23': 'roast chicken',
+    '2022-01-24': 'portobello risotto',
+    '2022-01-25': 'jeyuk bokkeum',
+    '2022-01-27': 'chicken fillets',
+    '2022-01-27b': 'fried kale',
+    '2022-01-28': 'chicken chao fan',
+    '2022-01-29': 'potato salad',
+    '2022-01-30': 'roast chicken',
+    '2022-01-31': 'pasta carbonara',
+    '2022-02-01': 'burgers',
+    '2022-02-02': 'chicken stroganoff',
+    '2022-02-03': 'jeyuk bokkeum',
+    '2022-02-05': 'pork miso udon',
+    '2022-02-06': 'chicken burgers',
+    '2022-02-08': 'carne de panela',
+    '2022-02-09': 'kare rice',
+    '2022-02-10': 'champignon risotto',
+    '2022-02-11': 'pasta bolognese',
+    '2022-02-12': 'porridge with garlic miso',
+    '2022-02-14': 'mac and cheese',
+    '2022-02-15': 'chicken thighs with onion',
+    '2022-02-17': 'tonkatsu',
+    '2022-02-17b': 'miso shiru',
+    '2022-02-18': 'potato salad',
+    '2022-02-19': 'beet salad',    
 })
 
 
-def histogram():
-    c = Counter(dinners.values())
+def histogram(start_date='2000-01-01'):
+    c = Counter(d[1] for d in dinners.items() if d[0] >= start_date)
     print('\n'.join(f"{item[1]} {item[0]}" for item in reversed(c.most_common()) if item[0] != ''))
 
 
