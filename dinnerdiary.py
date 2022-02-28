@@ -203,11 +203,11 @@ dinners = OrderedDict({
     '2022-01-29': 'potato salad',
     '2022-01-30': 'roast chicken',
     '2022-01-31': 'pasta carbonara',
-    '2022-02-01': 'burgers',
+    '2022-02-01': 'hamburger',
     '2022-02-02': 'chicken stroganoff',
     '2022-02-03': 'jeyuk bokkeum',
     '2022-02-05': 'pork miso udon',
-    '2022-02-06': 'chicken burgers',
+    '2022-02-06': 'chicken burger',
     '2022-02-08': 'carne de panela',
     '2022-02-09': 'kare rice',
     '2022-02-10': 'champignon risotto',
@@ -218,13 +218,24 @@ dinners = OrderedDict({
     '2022-02-17': 'tonkatsu',
     '2022-02-17b': 'miso shiru',
     '2022-02-18': 'potato salad',
-    '2022-02-19': 'beet salad',    
+    '2022-02-19': 'beet salad',
+    '2022-02-20': 'tuna mayo pasta',
+    '2022-02-20b': 'coq au vin',
+    '2022-02-21': 'nitsuke',
+    '2022-02-22': 'bifum',
+    '2022-02-23': 'kung pao chicken',
+    '2022-02-24': 'chao fan',
+    '2022-02-25': 'hamburger',
+    '2022-02-26': 'beans',
+    '2022-02-26b': 'hummus',
+    '2022-02-27': 'kare udon',
+    '2022-02-28': '',    
 })
 
 
 def histogram(start_date='2000-01-01'):
     c = Counter(d[1] for d in dinners.items() if d[0] >= start_date)
-    print('\n'.join(f"{item[1]} {item[0]}" for item in reversed(c.most_common()) if item[0] != ''))
+    return sorted([f"{'%02d' % item[1]} {item[0]}" for item in reversed(c.most_common()) if item[0] != ''])
 
 
 def when_made(search_term):
@@ -233,3 +244,7 @@ def when_made(search_term):
 
 def pretty_print():
     print('\n'.join(f"{date}: {dish}" for date, dish in dinners.items() if dish != ''))
+
+
+def print_histogram(start_date='2000-01-01'):
+    print('\n'.join(histogram(start_date)))
