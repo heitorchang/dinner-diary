@@ -230,8 +230,9 @@ dinners = OrderedDict({
     '2022-02-26': 'beans',
     '2022-02-26b': 'hummus',
     '2022-02-27': 'kare udon',
-    # '2022-02-28': '',
-    # '2022-03-01': '',
+    '2022-02-28': 'mu-shu pork',
+    '2022-02-28b': 'dadinho de tapioca',
+    '2022-03-01': 'grilled beef steak',
     # '2022-03-02': '',
     # '2022-03-03': '',
     # '2022-03-04': '',
@@ -240,6 +241,7 @@ dinners = OrderedDict({
     '2022-03-07': 'meatloaf',
     '2022-03-08': 'tomato honey chicken',
     '2022-03-09': 'cod w/ tomato sauce',
+    '2022-03-10': 'chicken with cabbage',
 })
 
 
