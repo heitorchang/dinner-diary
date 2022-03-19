@@ -12,7 +12,7 @@ def print_entries(yr, mo, day):
         print(f"    '{dstart.strftime('%Y-%m-%d')}': '',")
         dstart += timedelta(days=1)
 
-        
+
 dinners = OrderedDict({
     '2021-05-01': 'pizza de key',
     '2021-05-02': 'kare udon',
@@ -230,9 +230,19 @@ dinners = OrderedDict({
     '2022-02-26': 'beans',
     '2022-02-26b': 'hummus',
     '2022-02-27': 'kare udon',
-    '2022-02-28': 'mu-shu pork',    
-    '2022-02-28b': 'dadinho de tapioca',    
+    '2022-02-28': 'mu-shu pork',
+    '2022-02-28b': 'dadinho de tapioca',
     '2022-02-28c': 'heart of palm salad',
+    '2022-03-01': 'grilled beef steak',
+    # '2022-03-02': '',
+    # '2022-03-03': '',
+    # '2022-03-04': '',
+    # '2022-03-05': '',
+    # '2022-03-06': '',
+    '2022-03-07': 'meatloaf',
+    '2022-03-08': 'tomato honey chicken',
+    '2022-03-09': 'cod w/ tomato sauce',
+    '2022-03-10': 'chicken with cabbage',
 })
 
 
