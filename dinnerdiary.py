@@ -28,7 +28,7 @@ dish_ingredients = {
     'beef steak with worcestershire sauce': ['beef'],
     'beef stew': ['beef', 'potatoes', 'vegetables'],
     'beef teriyaki': ['beef'],
-    'beef wellington': ['beef'],
+    'beef wellington': [],  # do not show in searches
     'beef with manioc': ['beef', 'manioc'],
     'beef with wine sauce': ['beef'],
     'beet salad': ['vegetables'],
@@ -56,7 +56,7 @@ dish_ingredients = {
     'chickpea and tomato salad': ['chickpeas', 'tomatoes'],
     'chickpea pie': ['chickpeas'],
     'chinese-style pork': ['pork', 'vegetables'],
-    'cod w/ tomato sauce': ['fish'],
+    'cod w/ tomato sauce': ['fish', 'tomato sauce'],
     'coleslaw': ['cabbage', 'carrots'],
     'coq au vin': ['chicken', 'bacon', 'mushrooms'],
     'dadinho de tapioca': ['fried', 'tapioca'],
