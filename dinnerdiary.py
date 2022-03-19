@@ -13,6 +13,148 @@ def print_entries(yr, mo, day):
         dstart += timedelta(days=1)
 
 
+dish_ingredients = {
+    'asparagus risotto': ['rice', 'vegetables'],
+    'baguette sandwich': ['bread', 'cold cuts'],
+    'baked chicken': ['chicken', 'potatoes'],
+    'baked milanese': ['chicken'],
+    'baked rice': ['rice'],
+    'baloney sandwich': ['bread', 'cold cuts'],
+    'bean soup': ['beans'],
+    'bean, pork and kale soup': ['beans', 'pork', 'vegetables'],
+    'beans': ['beans'],
+    'beans with sausage': ['beans', 'sausage'],
+    'beef steak with funghi': ['beef', 'mushrooms'],
+    'beef steak with worcestershire sauce': ['beef'],
+    'beef stew': ['beef', 'potatoes', 'vegetables'],
+    'beef teriyaki': ['beef'],
+    'beef wellington': ['beef'],
+    'beef with manioc': ['beef', 'manioc'],
+    'beef with wine sauce': ['beef'],
+    'beet salad': ['vegetables'],
+    'bifum': ['noodles'],
+    'breaded beef steak': ['beef'],
+    'breaded beef strips': ['beef'],
+    'burgers': ['ground meat'],
+    'cabbage rolls': ['ground meat', 'cabbage'],
+    'carne de panela': ['beef', 'potatoes', 'carrots'],
+    'cauliflower au gratin': ['vegetables'],
+    'champignon risotto': ['rice', 'mushrooms'],
+    'chao fan': ['rice', 'vegetables'],
+    'chicken burger': ['ground meat', 'chicken'],
+    'chicken chao fan': ['rice', 'chicken', 'vegetables'],
+    'chicken crepes': ['chicken'],
+    'chicken fillets': ['chicken'],
+    'chicken nuggets': ['chicken', 'fried'],
+    'chicken pot pie': ['chicken', 'cream', 'vegetables'],
+    'chicken stroganoff': ['chicken', 'cream'],
+    'chicken thighs with onion': ['chicken'],
+    'chicken vegetable soup': ['chicken', 'vegetables'],
+    'chicken with cabbage': ['chicken', 'cabbage'],
+    'chicken with miso': ['chicken', 'miso'],
+    'chicken with sliced potatoes': ['chicken', 'potatoes'],
+    'chickpea and tomato salad': ['chickpeas', 'tomatoes'],
+    'chickpea pie': ['chickpeas'],
+    'chinese-style pork': ['pork', 'vegetables'],
+    'cod w/ tomato sauce': ['fish'],
+    'coleslaw': ['cabbage', 'carrots'],
+    'coq au vin': ['chicken', 'bacon', 'mushrooms'],
+    'dadinho de tapioca': ['fried', 'tapioca'],
+    'deep-dish pizza': ['bread', 'cheese'],
+    'eggplant lasagna': ['vegetables', 'cream', 'tomato sauce'],
+    'empanada': ['bread', 'ground meat'],
+    'esfiha': ['bread', 'ground meat'],
+    'fried chicken': ['chicken', 'fried'],
+    'fried fish': ['fish', 'fried'],
+    'fried kale': ['vegetables'],
+    'fried manioc': ['manioc'],
+    'funghi risotto': ['rice', 'mushrooms'],
+    'garlic bacon pasta': [],
+    'gizzards with onion': [],
+    'green beans salad': [],
+    'grilled beef steak': [],
+    'ground beef with mixed veggies': [],
+    'gyoza': [],
+    'ham and cheese sandwich': [],
+    'heart of palm salad': [],
+    'hijiki gohan': [],
+    'hot dog and fries': [],
+    'hummus': [],
+    'hummus sandwich': [],
+    'inari sushi': [],
+    'jeyuk bokkeum': [],
+    'kare rice': [],
+    'kare udon': [],
+    'kibbeh': [],
+    'kung pao chicken': [],
+    'lamen': [],
+    'lasagna': [],
+    'lettuce wrap with chicken': [],
+    'ma-po tofu': [],
+    'mac and cheese': [],
+    'meatloaf': [],
+    'mifen': [],
+    'miso shiru': [],
+    'miso udon': [],
+    'mu-shu pork': [],
+    'napa cabbage and beans': [],
+    'nitsuke': [],
+    'noodle soup': [],
+    'nuggets': [],
+    'omelet': [],
+    'onigiri': [],
+    'pad thai': [],
+    'panqueca de carne': [],
+    'pasta bolognese': [],
+    'pasta bolognese with soy protein': [],
+    'pasta carbonara': [],
+    'pasta with creamy bacon': [],
+    'pasta with mussels': [],
+    'pasta with sausage': [],
+    'pasta with zucchini': [],
+    'pizza de buu': [],
+    'pizza de key': [],
+    'pork loin with bell peppers': [],
+    'pork miso udon': [],
+    'pork steak': [],
+    'pork with broccoli': [],
+    'pork with miso': [],
+    'porridge with garlic miso': [],
+    'portobello risotto': [],
+    'potato salad': [],
+    'ratatouille': [],
+    'rice pilaf': [],
+    'roast chicken': [],
+    'roast pork ribs': [],
+    'sausage soup': [],
+    'shimeji risotto': [],
+    'shredded chicken risotto': [],
+    'soy bolognese pasta': [],
+    'spaghetti with meatballs': [],
+    'spaghetti with pesto': [],
+    'stuffed potatoes': [],
+    'stuffed zucchini': [],
+    'sushi': [],
+    'tempura': [],
+    'tempura udon': [],
+    'teok with shimeji': [],
+    'tom kha chicken': [],
+    'tom yum soup': [],
+    'tomato honey chicken': [],
+    'tomato honey pork': [],
+    'tomato risotto': [],
+    'tonkatsu': [],
+    'tuna mayo pasta': [],
+    'tuna steak': [],
+    'udon': [],
+    'vegetable curry': [],
+    'vegetable soup': [],
+    'velvet beef': [],
+    'vietnamese shrimp rolls': [],
+    'vodka pasta': [],
+    'yakisoba': [],
+}
+
 dinners = OrderedDict({
     '2021-05-01': 'pizza de key',
     '2021-05-02': 'kare udon',
@@ -234,15 +376,21 @@ dinners = OrderedDict({
     '2022-02-28b': 'dadinho de tapioca',
     '2022-02-28c': 'heart of palm salad',
     '2022-03-01': 'grilled beef steak',
-    # '2022-03-02': '',
-    # '2022-03-03': '',
-    # '2022-03-04': '',
-    # '2022-03-05': '',
-    # '2022-03-06': '',
+    '2022-03-03': 'portobello risotto',
+    '2022-03-04': 'soy bolognese pasta',
+    '2022-03-05': 'esfiha',
+    '2022-03-06': 'carne de panela',
     '2022-03-07': 'meatloaf',
     '2022-03-08': 'tomato honey chicken',
     '2022-03-09': 'cod w/ tomato sauce',
     '2022-03-10': 'chicken with cabbage',
+    '2022-03-11': 'chao fan',
+    '2022-03-12': 'panqueca de carne',
+    '2022-03-13': 'roast chicken',
+    '2022-03-14': 'gizzards with onion',
+    '2022-03-15': 'miso udon',
+    '2022-03-17': 'sushi',
+    '2022-03-19': 'portobello risotto',
 })
 
 
@@ -252,7 +400,11 @@ def histogram(start_date='2000-01-01'):
 
 
 def when_made(search_term):
-    print('\n'.join(f"{date}: {dish}" for date, dish in dinners.items() if search_term in dish))
+    last_made = ""
+    for date, dish in dinners.items():
+        if search_term in dish:
+            last_made = date
+    return f"{last_made}: {search_term}"
 
 
 def pretty_print():
@@ -261,3 +413,30 @@ def pretty_print():
 
 def print_histogram(start_date='2000-01-01'):
     print('\n'.join(histogram(start_date)))
+
+
+def check_ingredients_dict():
+    """Check that all dishes in 'dinners' are in dish_ingredients"""
+    if len(set(dinners.values())) == len(dish_ingredients):
+        print("Ingredients check ok")
+    else:
+        missing = set(dinners.values()) - dish_ingredients.keys()
+        print(sorted(missing), "are missing ingredients in the dish_ingredients dict")
+
+
+def general_ingredients():
+    """Collect distinct ingredients from lists in dish_ingredients"""
+    for ingr in sorted(set(ingr for dish_list in dish_ingredients.values() for ingr in dish_list)):
+        print(ingr)
+
+
+def dishes_with_ingredient(ingr):
+    """Return all dishes with ingredient ingr"""
+    matches = set(d for d in dish_ingredients if ingr in dish_ingredients[d])
+    match_when = sorted(when_made(d) for d in matches)
+    for m in match_when:
+        print(m)
+
+
+# call when sending whole file
+check_ingredients_dict()
