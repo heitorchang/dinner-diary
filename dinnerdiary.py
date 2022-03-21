@@ -152,7 +152,7 @@ dish_ingredients = {
     'velvet beef': ['beef', 'vegetables'],
     'vietnamese shrimp rolls': ['shrimps', 'carrots'],
     'vodka pasta': ['pasta', 'cream'],
-    'yakisoba': ['noodles', 'beef', 'vegetables'],
+    'yakisoba': ['noodles', 'beef', 'vegetables', 'cabbage', 'carrots'],
 }
 
 dinners = OrderedDict({
