@@ -97,6 +97,7 @@ dish_ingredients = {
     'miso shiru': ['miso', 'vegetables'],
     'miso udon': ['miso', 'noodles'],
     'mu-shu pork': ['pork', 'mushrooms', 'eggs'],
+    'mussels pasta': ['seafood', 'pasta'],
     'napa cabbage and beans': ['vegetables'],
     'nitsuke': ['soup', 'yams', 'vegetables', 'beef'],
     'noodle soup': ['soup', 'noodles', 'vegetables'],
@@ -394,7 +395,7 @@ dinners = OrderedDict({
     '2022-03-20': 'roast chicken',
     '2022-03-21': 'vegetable soup',
     '2022-03-22': 'beef teriyaki',
-    '2022-03-22b': 'ground beef with vegetables',
+    '2022-03-22b': 'ground beef with mixed veggies',
     '2022-03-23': 'mu-shu pork',
     '2022-03-24': 'kare udon',
     '2022-03-25': 'potato salad',
@@ -459,4 +460,5 @@ print("""Usage:
 print_histogram('2000-01-01') shows how many times a dish was made since the given date. Without a date, all entries are counted.
 main_ingredients() prints broad categories of ingredients used.
 with_ingredient(ingr) prints dishes containing ingr and the last time it was made.
+check_ingredients_dict() checks if the two data dictionaries agree.
 """)
