@@ -96,11 +96,11 @@ dish_ingredients = {
     'mifen': ['noodles'],
     'miso shiru': ['miso', 'vegetables'],
     'miso udon': ['miso', 'noodles'],
-    'mu-shu pork': ['pork', 'mushrooms'],
+    'mu-shu pork': ['pork', 'mushrooms', 'eggs'],
+    'mussels pasta': ['seafood', 'pasta'],
     'napa cabbage and beans': ['vegetables'],
     'nitsuke': ['soup', 'yams', 'vegetables', 'beef'],
     'noodle soup': ['soup', 'noodles', 'vegetables'],
-    'nuggets': ['chicken', 'fried'],
     'omelet': ['eggs'],
     'onigiri': ['rice'],
     'pad thai': ['noodles'],
@@ -231,7 +231,7 @@ dinners = OrderedDict({
     '2021-07-08': 'cabbage rolls',
     '2021-07-09': 'ham and cheese sandwich',
     '2021-07-10': 'vietnamese shrimp rolls',
-    '2021-07-11': 'nuggets',
+    '2021-07-11': 'chicken nuggets',
     '2021-07-12': 'potato salad',
     '2021-07-13': 'noodle soup',
     '2021-07-14': 'ma-po tofu',
@@ -250,7 +250,7 @@ dinners = OrderedDict({
     '2021-07-30': 'garlic bacon pasta',
     '2021-07-31': 'beef stew',
     '2021-08-01': 'noodle soup',
-    '2021-08-02': 'nuggets',
+    '2021-08-02': 'chicken nuggets',
     '2021-08-02b': 'fried manioc',
     '2021-08-03': 'omelet',
     '2021-08-04': 'potato salad',
@@ -391,11 +391,20 @@ dinners = OrderedDict({
     '2022-03-15': 'miso udon',
     '2022-03-17': 'sushi',
     '2022-03-19': 'portobello risotto',
-    '2022-03-20': '',
-    '2022-03-21': '',
-    '2022-03-22': '',
+    '2022-03-19b': 'ma-po tofu',
+    '2022-03-20': 'roast chicken',
+    '2022-03-21': 'vegetable soup',
+    '2022-03-22': 'beef teriyaki',
+    '2022-03-22b': 'ground beef with mixed veggies',
     '2022-03-23': 'mu-shu pork',
-    '2022-03-24': '',
+    '2022-03-24': 'kare udon',
+    '2022-03-25': 'potato salad',
+    '2022-03-27': 'mussels pasta',
+    '2022-03-27b': '',
+    '2022-03-28': '',
+    '2022-03-29': '',
+    '2022-03-30': '',
+    '2022-03-31': '',
 })
 
 
@@ -451,4 +460,5 @@ print("""Usage:
 print_histogram('2000-01-01') shows how many times a dish was made since the given date. Without a date, all entries are counted.
 main_ingredients() prints broad categories of ingredients used.
 with_ingredient(ingr) prints dishes containing ingr and the last time it was made.
+check_ingredients_dict() checks if the two data dictionaries agree.
 """)
